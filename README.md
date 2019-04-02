@@ -1,6 +1,6 @@
 Seeing Music is part of [Creatability](https://experiments.withgoogle.com/collection/creatability) which explores how creative tools can be made more accessible for everyone. The live site can be [found here](https://creatability.withgoogle.com/seeing-music/).
 
-This is not a Google Product.
+This is not a Google product.
 
 # Overview
 
