@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Seeing Music</title>
+	<script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+	<script src="/third_party/creatability-components/components.bundle.js"></script>
+
+	<!-- META -->
+
+	<!-- NAME -->
+	<meta itemprop="name" content="Seeing Music">
+	<meta name="twitter:title" content="Seeing Music">
+	<meta property="og:title" content="Seeing Music">
+	<meta property="og:site_name" content="Seeing Music">
+	<!-- LINK -->
+	<meta property="og:url" content="https://creatability.withgoogle.com/seeing-music/">
+	<!-- DESCRIPTION -->
+	<meta name="description" content="An experiment that lets you experience music visually.">
+	<meta name="twitter:description" content="An experiment that lets you experience music visually.">
+	<meta property="og:description" content="An experiment that lets you experience music visually.">
+	<meta itemprop="description" content="An experiment that lets you experience music visually.">
+	<!-- IMAGE -->
+	<meta name="image" content="https://creatability.withgoogle.com/seeing-music/assets/SeeingMusic_Hero.jpg">
+	<meta itemprop="image" content="https://creatability.withgoogle.com/seeing-music/assets/SeeingMusic_Hero.jpg">
+	<meta property="og:image" content="https://creatability.withgoogle.com/seeing-music/assets/SeeingMusic_Hero.jpg">
+	<meta name="twitter:image" content="https://creatability.withgoogle.com/seeing-music/assets/SeeingMusic_Hero.jpg">
+	<meta property="og:image:alt" content="A circular, squiggly object in the center of the screen with rainbow-colored rectangles arranged horizontally to the left of it.">
+	<meta name="twitter:image:alt" content="A circular, squiggly object in the center of the screen with rainbow-colored rectangles arranged horizontally to the left of it.">
+	<!-- TYPE -->
+	<meta name="twitter:card" content="summary">
+	<meta property="og:type" content="website">
+
+	<!-- END META -->
+
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
+
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+</head>
+<body>
+
+	<!-- SIDE PANEL -->
+
+	<acc-side-panel label="Seeing Music">
+
+		<acc-group id="audioInput" label="Basic Mode">
+
+			<div class="blurb">
+				Use this mode to visualize monophonic music such as a human voice.
+			</div>
+
+			<acc-toggle id="mic" label="Microphone" disabled class="noPiano"></acc-toggle>
+
+			<acc-select id='visualizer' label="Visualization" class="noPiano"></acc-select>
+
+			<acc-select id="inputSelect" label="Example Sound" class="noPiano">
+
+				<acc-item label="None"></acc-item>
+
+			</acc-select>
+		</acc-group>
+
+		<acc-group id="model" label="Piano Mode">
+			<div id="transcriptionInfo" class="blurb">
+				<i>Experimental!</i> Switch to this mode to visualize polyphonic music such as piano recordings. You can also play live using a MIDI keyboard. This will disable basic mode and mic input.
+			</div>
+			<acc-toggle id="piano-enable" label="Enable"></acc-toggle>
+		</acc-group>
+
+		<acc-group>
+			<div id="file-drop">
+				<input accept="audio/*" class="file-input" type="file" name="name" aria-hidden="true" style="display: none;"/>
+				<acc-button id="uploadButton" label="Choose your own file"></acc-button>
+				<button id="uploadedFile" class="nofile">no file chosen</button>
+			</div>
+		</acc-group>
+
+		<acc-group>
+			<acc-toggle id="color" checked label="Color"></acc-toggle>
+			<acc-toggle id="grid" label="Grid and Notes"></acc-toggle>
+		</acc-group>
+
+		<acc-learn-more-group link="https://experiments.withgoogle.com/seeing-music">
+		</acc-learn-more-group>
+
+		<acc-shortcut-group>
+			<acc-shortcut-item key="Shift+M" command="Mute"></acc-shortcut-item>
+			<acc-shortcut-item key="Shift+P" command="Pause"></acc-shortcut-item>
+		</acc-shortcut-group>
+
+	</acc-side-panel>
+
+	<!-- END SIDE PANEL -->
+
+	<!-- CANVAS -->
+
+	<canvas
+		id="main-canvas"
+		tabindex="0"
+		aria-atomic="true"
+		aria-live="polite">sound visualization</canvas>
+
+
+	<!-- QUIET GROUP -->
+
+	<acc-quiet-group dark></acc-quiet-group>
+
+	<!-- TUTORIAL -->
+
+	<acc-tutorial dark>
+		<acc-slide
+			video="/assets/s1.mp4"
+			alt="Microphone with stream of color representing notes coming out of it."
+			caption="This is a tool for visualizing music. You can turn on your mic to sing or play sounds."></acc-slide>
+		<acc-slide
+			caption="You can also drop in your own sound or video file."
+			alt="Mouse cursor dropping file, then a stream of notes comes out."
+			video="/assets/s2.mp4"></acc-slide>
+		<acc-slide
+			caption="Some modes – like Hilbert Scope and Spectrogram – show the subtle textures of sound."
+			alt="Animation of circular sound visualization and vertical equalizer sound visualization."
+			video="/assets/s3.mp4"></acc-slide>
+		<acc-slide
+			caption="Others show the paths and shapes of different melodies."
+			alt="Animation of circular visualization drawing ribbon of notes horizontally across the screen."
+			video="/assets/s4.mp4"></acc-slide>
+	</acc-tutorial>
+
+	<!-- END TUTORIAL -->
+
+	<!-- SPLASH -->
+
+	<acc-splash dark
+		image="/assets/splash.png"
+		label="Seeing Music"
+		alt="Microphone with rainbow ribbon passing through."
+		subtitle="Experience music visually.">
+
+		A collaboration between 
+		<a href="http://www.deafmusical.com" target="_blank">Jay Alan Zimmerman</a> and Google.
+		<br>
+		Explore more experiments at the <a href="https://experiments.withgoogle.com/collection/creatability" target="_blank">Creatability</a> site
+
+	</acc-splash>
+
+	<!-- END SPLASH -->
+
+	<!-- LOADER -->
+	<acc-loader></acc-loader>
+
+	<!-- FILE DROP -->
+	<div class="fileDrop" aria-hidden="true"><div id="text">drop file</div></div>
+
+	<!-- VIDEO GROUP -->
+	<div id="video-group">
+		<video playsinline autoplay loop="true" aria-hidden="true"></video>
+		<button id="video-controls" class="playing" aria-label="pause instrument video" aria-pressed="false"></button>
+	</div>
+
+	<!-- END VIDEO GROUP -->
+
+	<!-- ARIA ANOUNCING AREA -->
+	<acc-snackbar aria-live="assertive" duration="5" aria-atomic="true"></acc-snackbar>
+	<acc-snackbar
+		id="error-snack"
+		aria-live="assertive"
+		error
+		dismissable
+		duration="8"
+		aria-atomic="true"></acc-snackbar>
+
+	<!-- FALLBACK -->
+	<acc-fallback webaudio></acc-fallback>
+</body>
+</html>

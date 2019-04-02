@@ -1,0 +1,7 @@
+{
+	"voice" : ["Vox_Scale_3.mp4","Vox_Warmup_3.mp4","Vox_ItsyBitsy_1.mp4","Vox_Opera_2.mp4"],
+	"sax" : ["sax_scale01.mp4","sax_warmup01.mp4","sax_greensleevesJazz.mp4","sax_itsyBitsyJazz.mp4"],
+	"guitar" : ["Guitar_MajorScale_3.mp4","Guitar_Warmup_3.mp4","Guitar_Solo_2.mp4","Guitar_WhammyRiff_2.mp4"],
+	"violin" : ["violin_scale01.mp4","violin_warmup02.mp4","violin_itsySwag.mp4","violin_chords.mp4"],
+	"tabla" : ["tabla01.mp4","tabla02.mp4","tabla05.mp4","tabla06.mp4"]
+}

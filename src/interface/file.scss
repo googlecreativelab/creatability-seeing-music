@@ -1,0 +1,89 @@
+@import "../style.scss";
+
+.fileDrop {
+	position: absolute;
+	z-index: 100000;
+	pointer-events: none;
+	background-color: rgba(#aaa, 0.5);
+	top: 0px;
+	width: 100%;
+	left: 0px;
+	opacity: 0;
+	height: 100%;
+	$margin: 40px;
+	display: none;
+
+	#text {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+		font-size: 40px;
+	}
+
+	.drag & {
+		opacity: 1;
+		display: block;
+	}
+
+	&.disabled {
+		display: none;
+		height: 0px;
+	}
+}
+
+#video-group {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 270px;
+	height: 150px;
+	z-index: 1;
+
+	&:not(.playing) {
+		display: none;
+	}
+
+	video {
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		width: 100%;
+		height: 100%;
+	}
+
+	#video-controls {
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		width: 100%;
+		height: 100%;
+		background: url(./play.svg);
+		cursor: pointer;
+		background-size: 50px 50px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		opacity: 0;
+		transition: opacity 0.2s;
+		border: none;
+
+		&.playing {
+			background: url(./pause.svg);
+			cursor: pointer;
+			background-size: 50px 50px;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+		&:not(.playing){
+			opacity: 1;
+		}
+
+
+		&:hover, &:focus {
+			opacity: 1;
+		}	
+	}
+
+}

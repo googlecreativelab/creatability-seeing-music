@@ -1,0 +1,68 @@
+@import "../style.scss";
+
+acc-side-panel {
+
+	#uploadedFile {
+		overflow: hidden;
+		width: 100%;
+		font-size: 14px;
+		text-overflow: ellipsis;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		border: none;
+		background-color: transparent;
+		text-align: left;
+		display: block;
+		margin-top: -5px;
+		-webkit-select: none;
+		-moz-select: none;
+		select: none;
+		pointer-events: none;
+
+		&[disabled] {
+			pointer-events: none;
+			opacity: 0.25;
+		}
+
+
+		&:not(.nofile){
+			cursor: pointer;
+			color: var(--accent-color);
+			pointer-events: initial;
+
+			&:hover {
+				color: white;
+			}
+
+			&:before {
+				content: '×';
+				margin-right: 10px;
+			}
+		}
+
+		&.nofile {
+			font-style: italic;
+			color: var(--color-gray);
+		}
+	}
+
+	acc-select {
+		display: block;
+		margin-top: 20px;
+	}
+
+	.blurb {
+		font-size: 12px;
+	    padding: 10px;
+
+	    a {
+	    	color: var(--accent-color);
+	    }
+	}
+
+	#audioInput{
+		acc-button {
+			margin-top: 30px;
+		}
+	}
+}
