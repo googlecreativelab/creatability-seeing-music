@@ -13,7 +13,7 @@
     "url": "https://creativelab-internal.googlesource.com/acc-creativity-wordsynth"
   },
   "author": "Yotam Mann (ymann@google.com)",
-  "license": "Apache-2.0",
+  "license": "GPL-3",
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/polyfill": "^7.0.0",

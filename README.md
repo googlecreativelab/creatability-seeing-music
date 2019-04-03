@@ -31,3 +31,9 @@ This will bundle all of the javascript files and start a local server on port 80
 # Credits
 
 This experiment was made by Jay Alan Zimmerman, Yotam Mann, Claire Kearney-Volpe, Luisa Pereira, Kyle Phillips, and Google Creative Lab. Music performed by Jacquelyn Briggs (voice), Sam Posner (saxophone), Matt Lewcowicz (guitar), Melissa Tong (violin), and Jonathan Singer (tabla). Special thanks to Hanna Ehrenberg, Julia Silvestri, and our friends at Henry Viscardi School at The Viscardi Center, Tech Kids Unlimited, and ADAPT Community Network.
+
+# LICENSE
+
+Copyright 2019 Google LLC
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
