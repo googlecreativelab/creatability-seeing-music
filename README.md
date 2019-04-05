@@ -1,7 +1,5 @@
 Seeing Music is part of [Creatability](https://experiments.withgoogle.com/collection/creatability) which explores how creative tools can be made more accessible for everyone. The live site can be [found here](https://creatability.withgoogle.com/seeing-music/).
 
-This is not a Google product.
-
 # Overview
 
 Seeing Music is a tool for visualizing music. You can turn on your mic to sing or play sounds. You can also drop in your own audio or video file. Some modes – like Hilbert Scope and Spectrogram – show the subtle textures of sound while others show the paths and shapes of different melodies.
@@ -38,3 +36,5 @@ This experiment was made by Jay Alan Zimmerman, Yotam Mann, Claire Kearney-Volpe
 Copyright 2019 Google LLC
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+This is not an official Google product.
