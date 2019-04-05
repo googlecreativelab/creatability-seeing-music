@@ -1,8 +1,7 @@
 {
-  "name": "wordsynth",
+  "name": "seeing-music",
   "version": "1.0.0",
-  "description": "Word Synth!",
-  "main": "build/wordsynth.js",
+  "description": "Creatability's Seeing Music experiment.",
   "scripts": {
     "watch": "webpack -w --env.development",
     "build": "webpack",
@@ -10,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://creativelab-internal.googlesource.com/acc-creativity-wordsynth"
+    "url": "https://github.com/googlecreativelab/creatability-seeing-music"
   },
   "author": "Yotam Mann (ymann@google.com)",
   "license": "GPL-3",
