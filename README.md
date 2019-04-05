@@ -23,6 +23,7 @@ This will bundle all of the javascript files and start a local server on port 80
 
 # Tools
 
+* [Creatability Components](https://github.com/googlecreativelab/creatability-components)
 * [Audioscope](https://github.com/conundrumer/audioscope)
 * [PitchFinder](https://github.com/peterkhayes/pitchfinder)
 * [Tone.js](https://github.com/Tonejs/Tone.js)
