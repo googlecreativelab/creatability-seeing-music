@@ -4,11 +4,11 @@ This is not a Google product.
 
 # Overview
 
-Seeing Music is a tool for visualizing music. You can turn on your mic to sing or play sounds. You can also drop in your own audio or video file. Some modes – like Hilbert Scope and Spectrogram – show the subtle textures of sound. Others show the paths and shapes of different melodies.
+Seeing Music is a tool for visualizing music. You can turn on your mic to sing or play sounds. You can also drop in your own audio or video file. Some modes – like Hilbert Scope and Spectrogram – show the subtle textures of sound while others show the paths and shapes of different melodies.
 
 Use **Basic Mode** to visualize monophonic music such as a human voice. Use **Piano Mode** to visualize polyphonic music such as piano recordings. You can also use Piano Mode to visualize a live performance using a MIDI keyboard.
 
-The pitch detection is based on [this code](https://github.com/peterkhayes/pitchfinder). The hilbert scope is based on [this code](https://github.com/conundrumer/audioscope). The piano transcription is built with [Onsets and Frames](https://magenta.tensorflow.org/onsets-frames), a machine learning model made by the Magenta team at Google.
+The pitch detection is based on [this code](https://github.com/peterkhayes/pitchfinder). The Hilbert Scope is based on [this code](https://github.com/conundrumer/audioscope). The piano transcription is built with [Onsets and Frames](https://magenta.tensorflow.org/onsets-frames), a machine learning model made by the Magenta team at Google.
 
 # Install and Run
 
