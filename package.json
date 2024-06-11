@@ -46,7 +46,7 @@
     "unmute": "0.0.14",
     "url-loader": "^1.1.1",
     "webmidi": "^2.2.0",
-    "webpack": "^4.17.1",
+    "webpack": "^5.92.0",
     "webpack-cli": "^3.1.0",
     "whatwg-fetch": "^2.0.4"
   },
