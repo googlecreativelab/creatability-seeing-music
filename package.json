@@ -14,7 +14,7 @@
   "author": "Yotam Mann (ymann@google.com)",
   "license": "GPL-3",
   "devDependencies": {
-    "@babel/core": "^7.4.0",
+    "@babel/core": "^7.29.6",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.4.2",
     "@magenta/music": "^1.2.2",
